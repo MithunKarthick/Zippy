@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<script src="https://openui5.hana.ondemand.com/1.42.6/resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m, sap.tnt"
+				data-sap-ui-theme="sap_belize">
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+		<!-- https://openui5.hana.ondemand.com/1.42.6/resources/sap-ui-core.js -->
+		<!-- resources/sap-ui-core.js -->
+
+		<script>
+				sap.ui.localResources("zippy");
+				var app = new sap.m.App({initialPage:"idZippyMain"});
+				var page = sap.ui.view({id:"idZippyMain", viewName:"zippy.ZippyMain", type:sap.ui.core.mvc.ViewType.JS});
+				app.addPage(page);
+				app.placeAt("content");
+		</script>
+		
+		<style>
+			.main{
+				padding: 3rem 12rem;
+			}
+			.detail{
+				min-height: 30px;
+			}
+			.poster{
+				padding: 2rem;
+			}
+			.first{
+				padding: 15rem 15rem;
+				font-size: xx-large;
+				font-style: italic;
+			}
+			.title{
+				font-weight: bold;
+				font-size: x-large;
+			}
+			.subTitle{
+				font-size: larger;
+				font-style: italic;
+			}
+		</style>
+
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>
